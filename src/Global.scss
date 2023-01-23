@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600&family=Mulish:wght@300;400;600&family=Poppins:wght@500;700&family=Roboto+Slab:wght@600&display=swap");
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+body {
+  background-color: #282c34;
+}
+header {
+  width: 100%;
+  height: 200px;
+  background-color: #3e4147;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  h1 {
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 900;
+  }
+  form {
+    position: absolute;
+    bottom: -22px;
+    input,
+    button {
+      font-weight: 700;
+      height: 44px;
+      outline: none;
+      border: 0;
+    }
+    input {
+      border-top-left-radius: 5px;
+      border-bottom-left-radius: 5px;
+      width: 270px;
+      background-color: #262626;
+      padding: 0px 15px;
+      color: #fff;
+    }
+    button {
+      background-color: #1e6f9a;
+      color: #fff;
+      cursor: pointer;
+      border-top-right-radius: 5px;
+      width: 90px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+}
+.todo-main {
+  width: 100%;
+  margin-top: 50px;
+
+  .todo-list {
+    margin: auto;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 360px;
+    padding: 14px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 400;
+    background-color: #262626;
+    font-family: serif;
+    font-weight: 700;
+    overflow-wrap: break-word;
+
+    p {
+      font-size: 17px;
+      width: 80%;
+      cursor: pointer;
+    }
+    svg {
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    svg:nth-child(3):hover {
+      color: rgba(255, 5, 5, 0.711);
+    }
+    svg:nth-child(2):hover {
+      color: seagreen;
+    }
+    svg:nth-child(2) {
+      transform: translateX(-10px);
+    }
+  }
+  .approved {
+    color: grey;
+    text-decoration: line-through;
+  }
+}
+@media screen and (max-width) {
+}
