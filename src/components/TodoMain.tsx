@@ -1,4 +1,3 @@
-import React from "react";
 import ".././Global.css";
 import { BsTrashFill, BsCheckLg } from "react-icons/bs";
 
@@ -15,11 +14,7 @@ export default function TodoMain(props: {
     <div className="todo-main">
       {props.list.map((e: any) => (
         <div className="todo-list" key={Math.random()}>
-          {e.approved ? (
-            <p className="approved">{e.title}</p>
-          ) : (
-            <p>{e.title}</p>
-          )}
+          <p className={`${e.approved ? "approved" : ""}`}>{e.title}</p>
           <BsCheckLg onClick={() => props.Approve(e.id)} />
           <BsTrashFill size={17} onClick={() => props.deleteList(e.id)} />
         </div>

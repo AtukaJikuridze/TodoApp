@@ -12,16 +12,15 @@ function App() {
     setInputValue(e.target.value);
   }
   function Submit(e: any) {
-    inputValue.length > 0
-      ? setList([
-          {
-            title: inputValue,
-            id: Math.random(),
-            approved: false,
-          },
-          ...list,
-        ])
-      : setList([...list]);
+    inputValue.length &&
+      setList([
+        {
+          title: inputValue,
+          id: Math.random(),
+          approved: false,
+        },
+        ...list,
+      ]);
 
     setInputValue("");
   }
@@ -32,10 +31,8 @@ function App() {
   }
 
   function Approve(id: any) {
-    let newList = list.map((e: any) => {
-      if (e.id === id) {
-        e.approved = !e.approved;
-      }
+    list.map((e: any) => {
+      if (e.id === id) e.approved = !e.approved;
     });
     setList([...list]);
   }

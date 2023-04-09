@@ -73,7 +73,7 @@ header form button {
 .todo-main .todo-list p {
   font-size: 17px;
   width: 80%;
-  cursor: pointer;
+  transition: 0.2s;
 }
 .todo-main .todo-list svg {
   cursor: pointer;
